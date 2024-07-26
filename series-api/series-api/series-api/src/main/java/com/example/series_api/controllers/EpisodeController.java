@@ -1,13 +1,14 @@
-package controller;
-
-import model.Episode;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import service.EpisodeService;
+package com.example.series_api.controllers;
 
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.series_api.models.Episode;
+import com.example.series_api.services.EpisodeService;
 
 @RestController
 @RequestMapping("/api/episodes")
@@ -35,9 +36,9 @@ public class EpisodeController {
         return episodeService.saveEpisode(episode);
     }
 
-/**
- * Atualiza um episódio existente.
- * Tenho que resolver um pequno problema aqui
+
+ // Atualiza um episódio existente.
+ // Tenho que resolver um pequno problema aqui
     @PutMapping("/{id}")
     public ResponseEntity<Episode> updateEpisode(@PathVariable Long id, @RequestBody Episode episodeDetails) {
         Optional<Episode> optionalEpisode = episodeService.getEpisodeById(id);
@@ -52,7 +53,7 @@ public class EpisodeController {
             return ResponseEntity.notFound().build();
         }
     }
- */
+
 
     //Deleta um episódio por ID.
     @DeleteMapping("/{id}")

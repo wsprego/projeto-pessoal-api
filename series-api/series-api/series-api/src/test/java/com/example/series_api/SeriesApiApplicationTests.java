@@ -1,10 +1,10 @@
-package com.wsprego.SerieApi;
+package com.example.series_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SerieApiApplicationTests {
+class SeriesApiApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,12 +1,13 @@
-package service;
-
-import model.Episode;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import repository.EpisodeRepository;
+package com.example.series_api.services;
 
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.series_api.models.Episode;
+import com.example.series_api.repositories.EpisodeRepository;
 
 @Service
 public class EpisodeService {

@@ -1,14 +1,13 @@
-package com.wsprego.SerieApi;
+package com.example.series_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SerieApiApplication {
+public class SeriesApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SerieApiApplication.class, args);
-		System.out.println("ola mundo");
+		SpringApplication.run(SeriesApiApplication.class, args);
 	}
 
 }

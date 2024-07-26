@@ -1,4 +1,4 @@
-package model;
+package com.example.series_api.models;
 
 import jakarta.persistence.*;
 import lombok.*;
