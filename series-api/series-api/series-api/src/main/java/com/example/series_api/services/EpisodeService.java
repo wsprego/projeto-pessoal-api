@@ -30,4 +30,13 @@ public class EpisodeService {
     public void deleteEpisode(Long id) {
         episodeRepository.deleteById(id);
     }
+
+    public boolean existsByTitle(String episodeTitle) {
+        return episodeRepository.existsByTitle(episodeTitle);
+    }
+
+    public Optional<Episode> getEpisodeByTitle(String episodeTitle) {
+        return episodeRepository.findByEpisodeTitle(episodeTitle);
+    }
+
 }
