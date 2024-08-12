@@ -3,6 +3,7 @@ package com.example.series_api.services;
 import java.util.List;
 import java.util.Optional;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,10 +24,12 @@ public class EpisodeService {
         return episodeRepository.findById(id);
     }
 
+    @Transactional
     public Episode saveEpisode(Episode episode) {
         return episodeRepository.save(episode);
     }
 
+    @Transactional
     public void deleteEpisode(Long id) {
         episodeRepository.deleteById(id);
     }

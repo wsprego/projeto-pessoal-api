@@ -55,7 +55,7 @@ public class EpisodeController {
 
 
      //Cria um novo episódio.
-    @PostMapping
+    @PostMapping("/save")
     public ResponseEntity<EpisodeViewDTO> createEpisode(@RequestBody EpisodeCreateDTO episodeCreateDTO) {
         if (episodeService.existsByTitle(episodeCreateDTO.getEpisodeTitle())) {
             throw new ResourceAlreadyExistsException("Episódio já existe com o título: " + episodeCreateDTO.getEpisodeTitle());
@@ -66,7 +66,7 @@ public class EpisodeController {
     }
 
      //Atualiza um episódio existente.
-    @PutMapping("/{id}")
+    @PutMapping("edit/{id}")
     public ResponseEntity<EpisodeViewDTO> updateEpisode(@PathVariable Long id, @RequestBody EpisodeUpdateDTO episodeUpdateDTO) {
         Optional<Episode> optionalEpisode = episodeService.getEpisodeById(id);
         if (optionalEpisode.isPresent()) {
@@ -84,7 +84,7 @@ public class EpisodeController {
 
 
     //Deleta um episódio por ID.
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<Void> deleteEpisode(@PathVariable Long id) {
         if (!episodeService.getEpisodeById(id).isPresent()) {
             throw new ResourceNotFoundException("Episódio não encontrado com o ID: " + id);
