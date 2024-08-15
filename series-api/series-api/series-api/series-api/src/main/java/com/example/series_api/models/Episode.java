@@ -17,7 +17,7 @@ public class Episode {
     private Long id;
 
     private String seriesTitle;
-    private String episodeTitle;
+    private String episodeTitle;;
     private String episodeDescription;
     private String episodeImage;
 }
