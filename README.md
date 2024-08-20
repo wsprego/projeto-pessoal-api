@@ -7,11 +7,11 @@ Usando o Insomnia ou outro de preferencia, faça as requisições <br>
 
 ### Para os teste http
 
-Para Listar Todos episodeos `Get` - `localhost:8080/api/episodes`, listarar todos os episodeos <br>
-Para Listar episodeos por Id `Get` - `localhost:8080/api/episodes/1`, no lugar do 1 coloqie o Id desejado <br>
-Para Salva um novo episodeo `Post` - `localhost:8080/api/episodes`, lembre de colocar as informações no formato Json <br>
-Para Editar episodeos por Id `Put` - `localhost:8080/api/episodes/1`, no lugar do 1 coloqie o Id desejado <br>
-Para Editar episodeos por Id `Delete` - `localhost:8080/api/episodes/1`, no lugar do 1 coloqie o Id desejado
+Para Listar Todos episodeos `Get` - `localhost:8080/episodes`, listarar todos os episodeos <br>
+Para Listar episodeos por Id `Get` - `localhost:8080/episodes/1`, no lugar do 1 coloqie o Id desejado <br>
+Para Salva um novo episodeo `Post` - `localhost:8080/episodes/save`, lembre de colocar as informações no formato Json <br>
+Para Editar episodeos por Id `Put` - `localhost:8080/episodes/edit/1`, no lugar do 1 coloqie o Id desejado <br>
+Para Editar episodeos por Id `Delete` - `localhost:8080/episodes/delete/1`, no lugar do 1 coloqie o Id desejado
 
 ### Exemplo do formato JSON
 
